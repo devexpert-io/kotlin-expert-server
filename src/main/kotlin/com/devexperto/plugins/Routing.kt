@@ -14,28 +14,30 @@ fun Application.configureRouting() {
         get("/") {
             call.respondText("Hello World!")
         }
-        get("html") {
-            call.respondHtml(HttpStatusCode.OK) {
-                head {
-                    title { +"Hello Ktor" }
-                }
-                body {
-                    h1 { +"This is an h1" }
-                    p { +"This is a paragraph" }
-                    div {
-                        a(href = "html/clicked") { +"Click Me" }
+        route("/html"){
+            get() {
+                call.respondHtml(HttpStatusCode.OK) {
+                    head {
+                        title { +"Hello Ktor" }
+                    }
+                    body {
+                        h1 { +"This is an h1" }
+                        p { +"This is a paragraph" }
+                        div {
+                            a(href = "html/clicked") { +"Click Me" }
+                        }
                     }
                 }
             }
-        }
 
-        get("html/clicked") {
-            call.respondHtml {
-                head {
-                    title { +"Clicked" }
-                }
-                body {
-                    h1 { +"Button clicked" }
+            get("/clicked") {
+                call.respondHtml {
+                    head {
+                        title { +"Clicked" }
+                    }
+                    body {
+                        h1 { +"Button clicked" }
+                    }
                 }
             }
         }
