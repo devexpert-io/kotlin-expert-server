@@ -1,7 +1,7 @@
-package com.devexperto.plugins
+package com.devexperto.kotlinexpert.plugins
 
-import com.devexperto.models.Note
-import com.devexperto.repositories.NotesRepository
+import com.devexperto.kotlinexpert.models.Note
+import com.devexperto.kotlinexpert.repositories.NotesRepository
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.request.*

@@ -1,6 +1,6 @@
-package com.devexperto.repositories
+package com.devexperto.kotlinexpert.repositories
 
-import com.devexperto.models.Note
+import com.devexperto.kotlinexpert.models.Note
 
 object NotesRepository {
 

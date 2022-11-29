@@ -1,7 +1,7 @@
 package com.devexperto
 
-import com.devexperto.plugins.configureRouting
-import com.devexperto.plugins.configureSerialization
+import com.devexperto.kotlinexpert.plugins.configureRouting
+import com.devexperto.kotlinexpert.plugins.configureSerialization
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 

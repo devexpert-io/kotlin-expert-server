@@ -1,4 +1,4 @@
-package com.devexperto.models
+package com.devexperto.kotlinexpert.models
 
 import kotlinx.serialization.Serializable
 

@@ -1,4 +1,4 @@
-package com.devexperto.plugins
+package com.devexperto.kotlinexpert.plugins
 
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.application.*

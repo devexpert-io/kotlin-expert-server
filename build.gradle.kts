@@ -9,10 +9,10 @@ plugins {
     id("io.ktor.plugin") version "3.1.3"
 }
 
-group = "com.devexperto"
+group = "com.devexperto.kotlinexpert"
 version = "0.0.1"
 application {
-    mainClass.set("com.devexperto.ApplicationKt")
+    mainClass.set("com.devexperto.kotlinexpert.ApplicationKt")
 
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
