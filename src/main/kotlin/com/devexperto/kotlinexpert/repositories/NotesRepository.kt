@@ -4,11 +4,16 @@ import app.cash.sqldelight.driver.jdbc.sqlite.JdbcSqliteDriver
 import com.devexperto.kotlinexpert.database.AppDatabase
 import com.devexperto.kotlinexpert.database.DbNote
 import com.devexperto.kotlinexpert.models.Note
+import java.io.File
+
+private const val DATABASE_NAME = "database.db"
 
 object NotesRepository {
 
-    private val notesDb = JdbcSqliteDriver(JdbcSqliteDriver.IN_MEMORY).let {
-        AppDatabase.Schema.create(it)
+    private val notesDb = JdbcSqliteDriver(url = "jdbc:sqlite:$DATABASE_NAME").let {
+        if (!File(DATABASE_NAME).exists()) {
+            AppDatabase.Schema.create(it)
+        }
         AppDatabase(it)
     }.noteQueries
 
